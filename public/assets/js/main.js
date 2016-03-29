@@ -62,13 +62,15 @@ var AQE = (function ( $ ) {
     // if on home page, show search box and load recently created and updated eggs
     if($(".home-map").length != []){
       $("#pac-input").show()
+      /*
       $.each(["recently_created_at","recently_retrieved_at"],function(i,order){
         $.getJSON("/"+order+".json", function(data){
           $.each(data, function(i,egg){
             $("#"+order).append("<li><a href='/egg/"+egg.id+"'>"+egg.title+"</a> is a "+egg.status+" "+egg.location_exposure+" egg that was created "+moment(egg.created).fromNow()+" and last updated "+moment(egg.updated).fromNow()+" </li>")
           })
         })
-      })      
+      })    
+      */  
     }
 
 
